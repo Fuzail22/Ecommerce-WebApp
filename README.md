@@ -22,23 +22,23 @@ note:sit,pre-pop, are just different servers in actual.
 ->cannot be used before res.send and res.json.\
 ->to be used before res.write.\
 
-res.send():\
+### res.send():
 ->can't send variables, throws error invalid status code.
 
-Status:\
+### Status:
 ->status code to be set before a response is made else it won't be received at the user end.
 
 ## Connection Establishment:
 UI=>routes=>controller=>model=>config=>dbConnection\
 
-Refactoring:\
+#### Refactoring:
 ->Using Facade design pattern
 
-Status Code:\
+#### Status Code:
 ->204: cannot return anything except the code. used for successful updation and deletion
 
 ## Sequelize:
-Model synchronization:\
+### Model synchronization:
 modelname.sync() - This creates the table if it doesn't exist (and does nothing if it already exists)\
 modelname.sync({ force: true }) - This creates the table, dropping it first if it already existed.\
 modelname.sync({ alter: true }) - This checks what is the current state of the table in the database (which columns it has, what are their data types, etc), and then performs the necessary changes in the table to make it match the model.\
