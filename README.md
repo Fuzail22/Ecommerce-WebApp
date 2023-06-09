@@ -21,10 +21,8 @@ note:sit,pre-pop, are just different servers in actual.
 ### res.writeHead():
 ->cannot be used before res.send and res.json.\
 ->to be used before res.write.\
-
 ### res.send():
 ->can't send variables, throws error invalid status code.
-
 ### Status:
 ->status code to be set before a response is made else it won't be received at the user end.
 
