@@ -9,9 +9,9 @@ Environments:
 note:sit,pre-pop, are just different servers in actual.
 
 Steps:
-1.create a .env file in parent folder and initialize a port in it.
-2.create a server.config.js file inside config directory and set the environment port config and export it, now we can use that port for our server.
-3.create index.js inside routes dir to manage such individual requests separately and use it in server js. using app.use()(refer:https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get).
+1.create a .env file in parent folder and initialize a port in it.\
+2.create a server.config.js file inside config directory and set the environment port config and export it, now we can use that port for our server.\
+3.create index.js inside routes dir to manage such individual requests separately and use it in server js. using app.use()(refer:https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get).\
 
 res.end():
 ->should be used after res.write() and res.status() to indicate that there is no further data to be received.
