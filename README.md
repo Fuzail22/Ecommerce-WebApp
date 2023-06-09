@@ -1,5 +1,6 @@
-<p align="center"># Ecommerce-WebApp</p>
-This repo consist of prototype build of ecommerce app. Initial version consist of the backend API's using node js.
+<h1 align="center">Ecommerce-WebApp</h1>
+<p align="center">This repo consist of prototype build of ecommerce app. Initial version consist of the backend API's using node js.</p>
+
 
 ## Environments:
 1.development environment\
