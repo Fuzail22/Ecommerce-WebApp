@@ -27,7 +27,7 @@ res.send():\
 Status:\
 ->status code to be set before a response is made else it won't be received at the user end.\
 
-Connection Establishment:\
+## Connection Establishment:
 UI=>routes=>controller=>model=>config=>dbConnection\
 
 Refactoring:\
@@ -36,7 +36,7 @@ Refactoring:\
 Status Code:\
 ->204: cannot return anything except the code. used for successful updation and deletion\
 
-Sequelize:\
+## Sequelize:
 Model synchronization:\
 modelname.sync() - This creates the table if it doesn't exist (and does nothing if it already exists)
 modelname.sync({ force: true }) - This creates the table, dropping it first if it already existed
@@ -44,7 +44,7 @@ modelname.sync({ alter: true }) - This checks what is the current state of the t
 await seqInstance.sync({ force: true }) - to automatically synchronize all models.
 NOTE:seqInstance.sync({ force: true }) syncs only the models that are imported to the file where this command is present.
 
-CRUD:
+### CRUD:
 modelname.findOne()//returns the first hit
 modelname.findAll()
 modelname.findByPk()
@@ -55,7 +55,7 @@ modelname.create()//returns error if duplicate name is inserted and also id gets
 modelname.findOrCreate()
 modelname.findAndCountAll()
 
-Handling error without stopping program execution:
+## Handling error without stopping program execution:
 -> use try and catch if not used the app crashes on error, can also use finally which always gets executed.
 -> use throw new Error("Enter the string here");
 -> throw is javascript keyword and Erro is JS class.
@@ -63,26 +63,26 @@ Handling error without stopping program execution:
 await():
 -> not only makes the function wait till its execution but also returns true or false for the given operation.
 
-Window vs Doument:
+### Window vs Doument:
 In DOM document is part of the window.
 
-Testing:
+## Testing:
 1.unit(forming many test case for a function and checking it)
 2.automation
 3.TDD(Test driven Development)
 
-Validation:
+## Validation:
 ->used to validate before going into route function
 
-Filter:
+## Filter:
 ->passed in url,?filtername=value
 ->separate query parameters using &(?minPrice=200&maxPrice=20000)
 ->if(Object.keys(req.query).length==0) condition becomes true when  no query parameter is passed
 
-Async:
+### Async:
 -> any function call line inside async function doesn't wait for the line to be executed and return goes on to the next line if await is not mentioned.
 
-Debugging:
+## Debugging:
 ->Ctrl+Shift+D to go to run and debug.
 ->Then click on show all automatic debug configurations and select Node js
 ->Ctrl+Shift+P and type toggle auto attach and select and then select smart.
