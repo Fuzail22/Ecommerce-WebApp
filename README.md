@@ -56,11 +56,12 @@ modelname.findOrCreate()
 modelname.findAndCountAll()
 
 ## Handling error without stopping program execution:
--> use try and catch if not used the app crashes on error, can also use finally which always gets executed.
--> use throw new Error("Enter the string here");
--> throw is javascript keyword and Erro is JS class.
--> error Handler should always be at the end of middleware.
-await():
+-> use try and catch if not used the app crashes on error, can also use finally which always gets executed.\
+-> use throw new Error("Enter the string here");\
+-> throw is javascript keyword and Erro is JS class.\
+-> error Handler should always be at the end of middleware.\
+
+### await():
 -> not only makes the function wait till its execution but also returns true or false for the given operation.
 
 ### Window vs Doument:
@@ -82,13 +83,13 @@ In DOM document is part of the window.
 ### Async:
 -> any function call line inside async function doesn't wait for the line to be executed and return goes on to the next line if await is not mentioned.
 
-## Debugging:
-->Ctrl+Shift+D to go to run and debug.
-->Then click on show all automatic debug configurations and select Node js
-->Ctrl+Shift+P and type toggle auto attach and select and then select smart.
-->now run the js file with breakpoints added the debugger will auto attached.
-->f5-for next break point.
-->f10-for next step.
-->f11-to step into a funtion.
-->shift+f11-to step out
-->use watch to watch a specific variable
+## Debugging in VS Code: 
+->Ctrl+Shift+D to go to run and debug.\
+->Then click on show all automatic debug configurations and select Node js\
+->Ctrl+Shift+P and type toggle auto attach and select and then select smart.\
+->now run the js file with breakpoints added the debugger will auto attached.\
+->f5-for next break point.\
+->f10-for next step.\
+->f11-to step into a funtion.\
+->shift+f11-to step out.\
+->use watch to watch a specific variable.\
