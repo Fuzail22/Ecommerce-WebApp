@@ -1,42 +1,42 @@
 # Ecommerce-WebApp
 This repo consist of prototype build of ecommerce app. Initial version consist of the backend API's using node js.
 
-Environments:
-1.development environment
-2.test env(SIT)
-3.Pre-production env.
-4.Prod Env
-note:sit,pre-pop, are just different servers in actual.
+Environments:\
+1.development environment\
+2.test env(SIT)\
+3.Pre-production env.\
+4.Prod Env\
+note:sit,pre-pop, are just different servers in actual.\
 
-Steps:
+Steps:\
 1.create a .env file in parent folder and initialize a port in it.\
 2.create a server.config.js file inside config directory and set the environment port config and export it, now we can use that port for our server.\
 3.create index.js inside routes dir to manage such individual requests separately and use it in server js. using app.use()(refer:https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get).\
 
-res.end():
-->should be used after res.write() and res.status() to indicate that there is no further data to be received.
-->not required after res.json() and res.send() as it already indicates sending of data and completion.
-->cannot be used instead of return;
-res.writeHead():
-->cannot be used before res.send and res.json.
-->to be used before res.write.
-res.send():
-->can't send variables, throws error invalid status code.
+res.end():\
+->should be used after res.write() and res.status() to indicate that there is no further data to be received.\
+->not required after res.json() and res.send() as it already indicates sending of data and completion.\
+->cannot be used instead of return;\
+res.writeHead():\
+->cannot be used before res.send and res.json.\
+->to be used before res.write.\
+res.send():\
+->can't send variables, throws error invalid status code.\
 
-Status:
-->status code to be set before a response is made else it won't be received at the user end.
+Status:\
+->status code to be set before a response is made else it won't be received at the user end.\
 
-Connection Establishment:
-UI=>routes=>controller=>model=>config=>dbConnection
+Connection Establishment:\
+UI=>routes=>controller=>model=>config=>dbConnection\
 
-Refactoring:
-->Using Facade design pattern
+Refactoring:\
+->Using Facade design pattern\
 
-Status Code:
-->204: cannot return anything except the code. used for successful updation and deletion
+Status Code:\
+->204: cannot return anything except the code. used for successful updation and deletion\
 
-Sequelize:
-Model synchronization:
+Sequelize:\
+Model synchronization:\
 modelname.sync() - This creates the table if it doesn't exist (and does nothing if it already exists)
 modelname.sync({ force: true }) - This creates the table, dropping it first if it already existed
 modelname.sync({ alter: true }) - This checks what is the current state of the table in the database (which columns it has, what are their data types, etc), and then performs the necessary changes in the table to make it match the model.
