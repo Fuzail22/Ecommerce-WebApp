@@ -1,0 +1,4 @@
+routes/project/
+views/
+node_modules/
+db.config.js

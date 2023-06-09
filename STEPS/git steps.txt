@@ -1,0 +1,9 @@
+1.after creater a folder, open the folder in vs code.
+2.git init->creates .git file which implies this is a repository. deleting .git removes the repository status of the folder.
+3.git status
+4.git add .
+5.git commit -m "enter message here"
+6.git add remote origin.
+7.git push
+8.branches in repository settings need to be updated to secure branch from unknow updations.(lock branch and don't allow bypassing)
+9.git checkout -b <branch name>(eg:feature/my-custom-branch) for creating a new branch.
