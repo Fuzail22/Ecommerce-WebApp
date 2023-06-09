@@ -42,8 +42,7 @@ modelname.sync() - This creates the table if it doesn't exist (and does nothing 
 
 modelname.sync({ force: true }) - This creates the table, dropping it first if it already existed
 
-modelname.sync({ alter: true }) - This checks what is the current state of the table in the database (which columns it has, what are their data types, etc), and then performs the necessary changes in the table to make it match the model.
-
+modelname.sync({ alter: true }) - This checks what is the current state of the table in the database (which columns it has, what are their data types, etc), and then performs the necessary changes in the table to make it match the model.\
 await seqInstance.sync({ force: true }) - to automatically synchronize all models.
 
 NOTE:seqInstance.sync({ force: true }) syncs only the models that are imported to the file where this command is present.
