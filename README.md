@@ -14,15 +14,16 @@ note:sit,pre-pop, are just different servers in actual.
 3.create index.js inside routes dir to manage such individual requests separately and use it in server js. using app.use()(refer:https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get).
 
 ## Responses:
-res.end():\
+### res.end():
 ->should be used after res.write() and res.status() to indicate that there is no further data to be received.\
 ->not required after res.json() and res.send() as it already indicates sending of data and completion.\
 ->cannot be used instead of return;\
-res.writeHead():\
+### res.writeHead():
 ->cannot be used before res.send and res.json.\
 ->to be used before res.write.\
+
 res.send():\
-->can't send variables, throws error invalid status code.\
+->can't send variables, throws error invalid status code.
 
 Status:\
 ->status code to be set before a response is made else it won't be received at the user end.
@@ -38,10 +39,8 @@ Status Code:\
 
 ## Sequelize:
 Model synchronization:\
-modelname.sync() - This creates the table if it doesn't exist (and does nothing if it already exists)
-
-modelname.sync({ force: true }) - This creates the table, dropping it first if it already existed
-
+modelname.sync() - This creates the table if it doesn't exist (and does nothing if it already exists)\
+modelname.sync({ force: true }) - This creates the table, dropping it first if it already existed.\
 modelname.sync({ alter: true }) - This checks what is the current state of the table in the database (which columns it has, what are their data types, etc), and then performs the necessary changes in the table to make it match the model.\
 await seqInstance.sync({ force: true }) - to automatically synchronize all models.
 
@@ -53,16 +52,16 @@ modelname.findAll()\
 modelname.findByPk()
 
 modelnmae.update()//doesn't return an error even when nothing is passed in req.body or category id which is not present is passed.\
-modelname.create()//returns error if duplicate name is inserted and also id gets autoincrement even for errors thus the next correct enrty doesn't have continous id.\
+modelname.create()//returns error if duplicate name is inserted and also id gets autoincrement even for errors thus the next correct enrty doesn't have continous id.
 
 modelname.findOrCreate()\
-modelname.findAndCountAll()\
+modelname.findAndCountAll()
 
 ## Handling error without stopping program execution:
 -> use try and catch if not used the app crashes on error, can also use finally which always gets executed.\
 -> use throw new Error("Enter the string here");\
 -> throw is javascript keyword and Erro is JS class.\
--> error Handler should always be at the end of middleware.\
+-> error Handler should always be at the end of middleware.
 
 ### await():
 -> not only makes the function wait till its execution but also returns true or false for the given operation.
@@ -95,4 +94,4 @@ In DOM document is part of the window.
 ->f10-for next step.\
 ->f11-to step into a funtion.\
 ->shift+f11-to step out.\
-->use watch to watch a specific variable.\
+->use watch to watch a specific variable.
