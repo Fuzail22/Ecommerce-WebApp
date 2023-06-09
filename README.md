@@ -25,35 +25,39 @@ res.send():\
 ->can't send variables, throws error invalid status code.\
 
 Status:\
-->status code to be set before a response is made else it won't be received at the user end.\
+->status code to be set before a response is made else it won't be received at the user end.
 
 ## Connection Establishment:
 UI=>routes=>controller=>model=>config=>dbConnection\
 
 Refactoring:\
-->Using Facade design pattern\
+->Using Facade design pattern
 
 Status Code:\
-->204: cannot return anything except the code. used for successful updation and deletion\
+->204: cannot return anything except the code. used for successful updation and deletion
 
 ## Sequelize:
 Model synchronization:\
 modelname.sync() - This creates the table if it doesn't exist (and does nothing if it already exists)
+
 modelname.sync({ force: true }) - This creates the table, dropping it first if it already existed
+
 modelname.sync({ alter: true }) - This checks what is the current state of the table in the database (which columns it has, what are their data types, etc), and then performs the necessary changes in the table to make it match the model.
+
 await seqInstance.sync({ force: true }) - to automatically synchronize all models.
+
 NOTE:seqInstance.sync({ force: true }) syncs only the models that are imported to the file where this command is present.
 
 ### CRUD:
-modelname.findOne()//returns the first hit
-modelname.findAll()
+modelname.findOne()//returns the first hit\
+modelname.findAll()\
 modelname.findByPk()
 
-modelnmae.update()//doesn't return an error even when nothing is passed in req.body or category id which is not present is passed
-modelname.create()//returns error if duplicate name is inserted and also id gets autoincrement even for errors thus the next correct enrty doesn't have continous id.
+modelnmae.update()//doesn't return an error even when nothing is passed in req.body or category id which is not present is passed.\
+modelname.create()//returns error if duplicate name is inserted and also id gets autoincrement even for errors thus the next correct enrty doesn't have continous id.\
 
-modelname.findOrCreate()
-modelname.findAndCountAll()
+modelname.findOrCreate()\
+modelname.findAndCountAll()\
 
 ## Handling error without stopping program execution:
 -> use try and catch if not used the app crashes on error, can also use finally which always gets executed.\
@@ -68,17 +72,17 @@ modelname.findAndCountAll()
 In DOM document is part of the window.
 
 ## Testing:
-1.unit(forming many test case for a function and checking it)
-2.automation
+1.unit(forming many test case for a function and checking it)\
+2.automation\
 3.TDD(Test driven Development)
 
 ## Validation:
 ->used to validate before going into route function
 
 ## Filter:
-->passed in url,?filtername=value
-->separate query parameters using &(?minPrice=200&maxPrice=20000)
-->if(Object.keys(req.query).length==0) condition becomes true when  no query parameter is passed
+->passed in url,?filtername=value.\
+->separate query parameters using &(?minPrice=200&maxPrice=20000)\
+->if(Object.keys(req.query).length==0) condition becomes true when  no query parameter is passed.
 
 ### Async:
 -> any function call line inside async function doesn't wait for the line to be executed and return goes on to the next line if await is not mentioned.
