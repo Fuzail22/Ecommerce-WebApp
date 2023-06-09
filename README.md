@@ -1,14 +1,14 @@
 # Ecommerce-WebApp
 This repo consist of prototype build of ecommerce app. Initial version consist of the backend API's using node js.
 
-## Environments:\
+## Environments:
 1.development environment\
 2.test env(SIT)\
 3.Pre-production env.\
 4.Prod Env\
-note:sit,pre-pop, are just different servers in actual.\
+note:sit,pre-pop, are just different servers in actual.
 
-# Steps:\
+##Steps:
 1.create a .env file in parent folder and initialize a port in it.\
 2.create a server.config.js file inside config directory and set the environment port config and export it, now we can use that port for our server.\
 3.create index.js inside routes dir to manage such individual requests separately and use it in server js. using app.use()(refer:https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get).\
