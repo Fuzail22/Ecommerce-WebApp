@@ -26,8 +26,8 @@ note:sit,pre-pop, are just different servers in actual.
 ->we can directly send the data received using sequelize.findAll() without the need of converting it to json and sending it using res.write.\
 ->we don't need res.end() to end the response.\
 ->can't send variables, throws error invalid status code.
-###next()
-The next function is needed whenever app.use(express()) is used or the second function or get won't get executed. Continue from here.
+### next()
+The next function is needed whenever app.use(express()) is used or the second function or get won't get executed.\ Continue from here.
 ### Status:
 ->status code to be set before a response is made else it won't be received at the user end.
 
