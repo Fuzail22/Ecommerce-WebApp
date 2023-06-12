@@ -23,6 +23,8 @@ note:sit,pre-pop, are just different servers in actual.
 ->cannot be used before res.send and res.json.\
 ->to be used before res.write.\
 ### res.send():
+->we can directly send the data received using sequelize.findAll() without the need of converting it to json and sending it using res.write.\
+->we don't need res.end() to end the response.\
 ->can't send variables, throws error invalid status code.
 ### Status:
 ->status code to be set before a response is made else it won't be received at the user end.
