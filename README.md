@@ -38,7 +38,7 @@ UI=>Server=>routes=>controller=>model=>config=>dbConnection
 ->status code to be set before a response is made else it won't be received at the user end.
 
 ## API
-### /:productid
+### ecomm/api/v1/products/:productid
 ->to get the values after / from the api call.\
 eg: http://localhost:8080/ecomm/api/v1/products/2 \
 we can access that value 2 using req.params.productid;
@@ -91,13 +91,13 @@ In DOM document is part of the window.
 eg: requestValidator.requestValidatorForCategoryName(importName.FunctionName) \
 -> this function is used to check if there is a valid input for instance, \
 ```
-    const requestValidatorForCategoryName = (req, res, next) => {
-        if (!req.body.name) {
-          res.status(400).send("category name key must be passed");
-          return;
-        }
-        next();
-    };
+const requestValidatorForCategoryName = (req, res, next) => {
+    if (!req.body.name) {
+      res.status(400).send("category name key must be passed");
+      return;
+    }
+    next();
+};
 ```
 ## Filter:
 ->passed in url,?filtername=value.\
