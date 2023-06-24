@@ -37,6 +37,12 @@ UI=>Server=>routes=>controller=>model=>config=>dbConnection
 ### Status:
 ->status code to be set before a response is made else it won't be received at the user end.
 
+## API
+### /:productid
+->to get the values after / from the api call.\
+eg: http://localhost:8080/ecomm/api/v1/products/2
+we can access that value 2 using req.params.productid;
+
 #### Refactoring:
 ->Using Facade design pattern
 
