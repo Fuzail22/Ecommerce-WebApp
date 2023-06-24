@@ -89,7 +89,7 @@ In DOM document is part of the window.
 ## Validation:
 ->Validators are used to validate before going into controller function \
 eg: requestValidator.requestValidatorForCategoryName(importName.FunctionName) \
--> this function is used to check if there is a valid input for instance, \
+-> this function is used to check if there is a valid input in the request body, for instance
 ```
 const requestValidatorForCategoryName = (req, res, next) => {
     if (!req.body.name) {
