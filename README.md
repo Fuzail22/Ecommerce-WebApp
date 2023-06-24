@@ -97,6 +97,8 @@ In DOM document is part of the window.
 ### Async:
 -> any function call line inside async function doesn't wait for the line to be executed and return goes on to the next line if await is not mentioned.
 
+## GIT
+->Branching vs Trunking(Latest)
 ## Debugging in VS Code: 
 ->Ctrl+Shift+D to go to run and debug.\
 ->Then click on show all automatic debug configurations and select Node js\
