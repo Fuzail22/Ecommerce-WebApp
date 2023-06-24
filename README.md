@@ -40,7 +40,7 @@ UI=>Server=>routes=>controller=>model=>config=>dbConnection
 ## API
 ### /:productid
 ->to get the values after / from the api call.\
-eg: http://localhost:8080/ecomm/api/v1/products/2
+eg: http://localhost:8080/ecomm/api/v1/products/2 \
 we can access that value 2 using req.params.productid;
 
 #### Refactoring:
@@ -87,17 +87,17 @@ In DOM document is part of the window.
 3.TDD(Test driven Development)
 
 ## Validation:
-->Validators are used to validate before going into controller function
-eg: requestValidator.requestValidatorForCategoryName(importName.FunctionName)
+->Validators are used to validate before going into controller function \
+eg: requestValidator.requestValidatorForCategoryName(importName.FunctionName) \
 -> this function is used to check if there is a valid input for instance, \
 ```
-const requestValidatorForCategoryName = (req, res, next) => {
-  if (!req.body.name) {
-    res.status(400).send("category name key must be passed");
-    return;
-  }
-  next();
-};
+    const requestValidatorForCategoryName = (req, res, next) => {
+        if (!req.body.name) {
+          res.status(400).send("category name key must be passed");
+          return;
+        }
+        next();
+    };
 ```
 ## Filter:
 ->passed in url,?filtername=value.\
