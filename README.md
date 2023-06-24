@@ -90,6 +90,7 @@ In DOM document is part of the window.
 ->Validators are used to validate before going into controller function
 eg: requestValidator.requestValidatorForCategoryName(importName.FunctionName)
 -> this function is used to check if there is a valid input for instance, \
+```
 const requestValidatorForCategoryName = (req, res, next) => {
   if (!req.body.name) {
     res.status(400).send("category name key must be passed");
@@ -97,6 +98,7 @@ const requestValidatorForCategoryName = (req, res, next) => {
   }
   next();
 };
+```
 ## Filter:
 ->passed in url,?filtername=value.\
 ->separate query parameters using &(?minPrice=200&maxPrice=20000)\
