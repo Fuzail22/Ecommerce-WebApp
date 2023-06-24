@@ -9,6 +9,9 @@
 4.Prod Env\
 note:sit,pre-pop, are just different servers in actual.
 
+## Control Flow:
+UI=>Server=>routes=>controller=>model=>config=>dbConnection
+
 ## Steps:
 1.create a .env file in parent folder and initialize a port in it.\
 2.create a server.config.js file inside config directory and set the environment port config and export it, now we can use that port for our server.\
@@ -26,14 +29,13 @@ note:sit,pre-pop, are just different servers in actual.
 ->we can directly send the data received using sequelize.findAll() without the need of converting it to json and sending it using res.write.\
 ->we don't need res.end() to end the response.\
 ->can't send variables, throws error invalid status code.
+### bodyParser.json()
+-> the bodyParser is a middleware module used for parsing the request body in HTTP requests. It allows you to extract data from the request body, which can be in various formats such as JSON, URL-encoded, or multipart form data. The bodyParser module has been deprecated since Express 4.16.0, and the recommended alternative is to use the express.json() and express.urlencoded() middleware functions provided by Express itself.
 ### next()
 ->The next function is needed whenever app.use(express()) is used else the functions below it or the app.get below it won't get executed.\
 ->next function not required for router.use()
 ### Status:
 ->status code to be set before a response is made else it won't be received at the user end.
-
-## Connection Establishment:
-UI=>routes=>controller=>model=>config=>dbConnection\
 
 #### Refactoring:
 ->Using Facade design pattern
