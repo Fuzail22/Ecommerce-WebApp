@@ -88,6 +88,14 @@ In DOM document is part of the window.
 
 ## Validation:
 ->Validators are used to validate before going into controller function \
+->Validators are second parameter in the Router calls(get,post,put,delete,etc.,), for instance \
+```
+categoryRouter.post(
+  "/",
+  [requestValidator.requestValidatorForCategoryName],
+  categoryController.addNewCategory
+);
+```
 eg: requestValidator.requestValidatorForCategoryName(importName.FunctionName) \
 -> this function is used to check if there is a valid input in the request body, for instance
 ```
