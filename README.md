@@ -68,7 +68,7 @@ modelname.create()//returns error if duplicate name is inserted and also id gets
 
 modelname.findOrCreate()\
 modelname.findAndCountAll()
-
+NOTE: whether its find,update or delete we need to specify the where condition if it applies to all where needs to be { where: {} }.
 ### Model Values:
 default\\error
 defaultValue\\correct
