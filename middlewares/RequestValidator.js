@@ -4,7 +4,7 @@ const requestValidatorForCategoryName = (req, res, next) => {
     res.status(400).send("category name key must be passed");
     return;
   }
-  next();
+  next(); //suppose there are other middleware calls after this then that will be executed.
 };
 const requestValidatorForCategoryId = async (req, res, next) => {
   if (!req.params.categoryId) {

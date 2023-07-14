@@ -22,5 +22,5 @@ let productModel = seqInstance.define("product", {
     allowNull: false,
   },
 });
-//productModel.belongsTo(categoryModel);
+// productModel.belongsTo(categoryModel);
 module.exports = productModel;

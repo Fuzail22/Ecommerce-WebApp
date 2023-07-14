@@ -3,9 +3,10 @@ let Categories = require("./../model/Category");
 
 let getAllCategories = async function (req, res, next) {
   let cats = await Categories.findAll();
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.write(JSON.stringify(cats));
-  res.end();
+  res.send(cats); //we can directly send the object without the need of converting it to json and sending it using res.write
+  // res.writeHead(200, { "Content-Type": "application/json" }); //works even without this line. i.e., without specifing the content.
+  // res.write(JSON.stringify(cats));
+  // res.end();
   //   res.status(200).write("this is categories route");
   //   res.end();
   //res.status(200).json({ Data: "anb" });
