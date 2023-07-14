@@ -1,0 +1,15 @@
+{
+    "email":"fuzail@xyx.com",
+    "password":"fuzail456"
+
+}
+{
+    "email":"murali@xyx.com",
+    "password":"murali123"
+
+}
+{
+    "email":"ram@xyx.com",
+    "password":"ram456"
+
+}

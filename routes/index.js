@@ -4,7 +4,7 @@ let app = express();
 let router = express.Router();
 let categoryRouter = require("./categories.route");
 let productRouter = require("./products.route");
-
+const authRouter = require("./auth.route");
 // app.use(express.static(__dirname));
 
 router.get("/", function (req, res, next) {
@@ -15,6 +15,8 @@ router.get("/", function (req, res, next) {
   res.end();
   //res.status(200).json({ Data: "anb" });
 });
+
+router.use("/user", authRouter);
 router.use("/ecomm/api/v1/categories", categoryRouter);
 router.use("/ecomm/api/v1/products", productRouter);
 /* These belong to temporary academic project 
