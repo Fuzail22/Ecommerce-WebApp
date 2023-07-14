@@ -69,6 +69,11 @@ modelname.create()//returns error if duplicate name is inserted and also id gets
 modelname.findOrCreate()\
 modelname.findAndCountAll()
 
+### Model Values:
+default\\error
+defaultValue\\correct
+type: string\\error
+type: sequelize.STRING\\correct
 ## Handling error without stopping program execution:
 -> use try and catch if not used the app crashes on error, can also use finally which always gets executed.\
 -> use throw new Error("Enter the string here");\
