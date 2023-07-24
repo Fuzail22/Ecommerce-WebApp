@@ -1,5 +1,5 @@
 <h1 align="center">Ecommerce-WebApp</h1>
-<p align="center">This repository consist of work in progress prototype build of ecommerce app. Initial version consist of the backend API's using node js.</p>
+<p align="center">This repository consist of prototype build of ecommerce app along with docker implementation. Initial version consist of the backend API's using node js.</p>
 
 
 ## Environments:
