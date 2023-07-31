@@ -1,5 +1,5 @@
 <h1 align="center">Ecommerce-WebApp</h1>
-<p align="center">This repository consist of prototype build of ecommerce app along with docker implementation. Initial version consist of the backend API's using node js.</p>
+<p align="center">This repository consist of prototype build of ecommerce app along with docker implementation.The backend for the app was built from scratch consisting of Authentication, Token Generation, Sequelize Data Model, Category and Product Controllers, Middleware and Routes properly configured. <br>Endpoints for each specific request was created in the form of REST APIs.</p>
 
 
 ## Environments:
